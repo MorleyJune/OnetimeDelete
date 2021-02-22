@@ -1,6 +1,6 @@
 function deleteOldGmails() {
-  // 1年以上前のメールを削除
-  var deleteThreads = GmailApp.search('onetime-pass uec.ac.jp');
+  // 1日前の onetime-pass メールを狙い撃ちして自動削除
+  var deleteThreads = GmailApp.search('onetime-pass uec.ac.jp older-than:1d');
   Logger.log('該当スレッド: ' + deleteThreads.length + '件');
   for (var i = 0; i < deleteThreads.length; i++) {
     deleteThreads[i].moveToTrash();
