@@ -13,7 +13,7 @@ function deleteOldGmails() {
 
   const strTerms = 'before:'+ pastSecond.toString() +' '+ srchCon;
   const threads = GmailApp.search(strTerms, 0, 30); //条件にマッチしたスレッドを取得
-  const num = thread.length;
+  const num = threads.length;
   for (var i = 0; i < threads.length; i++) {
     threads[i].moveToTrash();
   }
