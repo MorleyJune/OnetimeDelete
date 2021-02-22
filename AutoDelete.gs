@@ -1,6 +1,6 @@
 function deleteOldGmails() {
   // 1年以上前のメールを削除
-  var deleteThreads = GmailApp.search('older_than:1y -is:starred');
+  var deleteThreads = GmailApp.search('onetime-pass uec.ac.jp');
   Logger.log('該当スレッド: ' + deleteThreads.length + '件');
   for (var i = 0; i < deleteThreads.length; i++) {
     deleteThreads[i].moveToTrash();
