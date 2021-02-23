@@ -1,4 +1,4 @@
-function deleteOldGmails() {
+function deleteOnetimeMails() {
   // 10 分以上前の onetime-pass メールを狙い撃ちして自動削除
   //受信日時指定
   const nowDate = new Date() ;//現在時刻を取得
